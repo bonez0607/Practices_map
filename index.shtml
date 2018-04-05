@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/nac960.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>Map with modal box</title>
+
+
+  
+  <link rel="stylesheet" href="css/map.css"></link>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/raphael-min.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+
+<!-- End Map Scripts -->
+</head>
+<body>
+  <!-- content container -->
+  <div class="container_12" id="content">
+    <!-- breadcrumbs -->
+
+    <!-- main content -->
+    <div class="grid_9 alpha" id="main">
+      <!-- InstanceBeginEditable name="content" -->
+      <h1>Test</h1>
+
+      <!--====||USA SVG MAP||===-->
+      <div id="map">
+        <h3>To learn which agroforestry practice standards are offered in each state, select:</h3>
+        <ul>
+          <li>A <strong>practice</strong> to display the states that offer the selected practice on the map</li>
+          <li>A <strong>state</strong> to show all agroforestry standards offered for that state</li>
+        </ul>
+        <!--Radio Buttons-->
+        <div class="practice-selection">
+          <fieldset>
+            <label class="alleycroppingLabel" for="AlleyCropping">
+              <input checked="checked" id="AlleyCropping" name="practice" type="radio" />
+            Alley Cropping (311)</label>
+            <label class="multistoryLabel" for="MultistoryCropping">
+              <input id="MultistoryCropping" name="practice" type="radio" />
+            Multistory Cropping (379)</label>
+            <label class="riparianLabel" for="RiparianForestBuffers">
+              <input id="RiparianForestBuffers" name="practice" type="radio" />
+            Riparian Forest Buffers (391)</label>
+            <label class="silvopastureLabel" for="Silvopasture">
+              <input id="Silvopasture" name="practice" type="radio" />
+            Silvopasture Establishment (381)</label>
+            <label class="windbreaksLabel" for="WindbreakEstablishment">
+              <input id="WindbreakEstablishment" name="practice" type="radio" />
+            Windbreak Establishment (380)</label>
+            <label class="windbreakrenovationLabel" for="WindbreakRenovation">
+              <input id="WindbreakRenovation" name="practice" type="radio" />
+            Windbreak Renovation (650)</label>
+          </fieldset>
+        </div>
+        <div id="united-states">
+          <!--PRE-LOADER-->
+          <div class="preloader">
+            <div class="preloader-text">
+              <h5>Loading...</h5>
+            </div>
+            <div class="preloader-spin"></div>
+          </div>
+        </div>
+        <p><em>This map was updated in May 2017.</em></p>
+        <!--MODAL POPUP-->
+        <div class="infobox" tabindex="-1">
+          <div class="infobox_title">
+            <h1>Region name</h1>
+          </div>
+          <div class="infobox_body">
+            <div class="offeredPractice"></div>
+            <div class="notOfferedPractice"></div>
+          </div>
+          <button aria-label="Opens new window to NRCS Field Office Technical Guide locator" class="trigger" title="Opens new window to NRCS Field Office Technical Guide locator">Find your FOTG<span class="external"></span></button>
+          <button aria-label="close" class="infobox_close" title="close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <sc
+</body>
+</html>

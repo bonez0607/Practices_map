@@ -1,4 +1,7 @@
-#main ul:first-child {
+/* Practices Map CSS */
+/* By Joe Banegos, 11/29/2016 */
+
+#map ul:first-child {
   text-align: center;
   list-style: none; }
 
@@ -27,7 +30,6 @@ a:focus {
 legend {
   position: relative;
   background: white; }
-
 
 /*
 |------------------

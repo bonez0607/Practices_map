@@ -613,19 +613,19 @@ $("#united-states").append("<div class='legend'><span class='legend-practice'>Al
             if (query !== undefined ) {
                 var urlParams = query.split(/["&"]/);
                 urlParams.forEach(function(parameter){
-
+                    
                    if (parameter === "#map"){
                        $("html, body").animate({scrollTop: $(parameter).offset().top }, 1000);
                        return;
-                   }
-
-
+                   } 
+                   
+                   
                    for (var i = 0; i< $("input[name='practice']").length; i++){
                            if (parameter === $("input[name=practice]")[i].id) {
                             $("input[name=practice]")[i].checked = true;
                             return;
-                           }
-
+                           } 
+                            
                    }
                 });
             } else {
@@ -831,6 +831,7 @@ function openBox(evt) {
                     "top": posy + "px",
                     "left": posx + "px"
                 }).focus().find(".infobox_title h1").text(state.data("id"));
+              //  showPractices(state);
             }
         });
     }
@@ -956,10 +957,10 @@ $.when(getPractices).done(function () {
 });
 
 $('.practice-selection').on("mouseup keyup", function(evt) {
-	if (evt.type === "mouseup" || evt.keyCode === 9) {
-    	$(evt.target).closest('.practice-selection').addClass('active'); //This find closest target when you click
-   		$("html, body").animate({scrollTop: $("#map").offset().top}, "slow"); //Scrolls down to map when practice is selected
-	}
+if (evt.type === "mouseup" || evt.keyCode === 9) {
+    $(evt.target).closest('.practice-selection').addClass('active'); //This find closest target when you click
+   $("html, body").animate({scrollTop: $("#map").offset().top}, "slow"); //Scrolls down to map when practice is selected
+}
 });
 
 $(document).on("mouseup keyup", function(evt){ //Here is when you click in your entire document
